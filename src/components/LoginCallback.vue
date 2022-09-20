@@ -28,7 +28,7 @@
                 res.json().then(json => {
                     userService.setAuthData(json);
                     userService.fetchUser();
-                    router.push('/');
+                    router.push('/user');
                 })
         })
     }

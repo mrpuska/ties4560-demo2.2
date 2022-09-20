@@ -8,6 +8,7 @@ import userService from './services/user-service'
   <div class="nav">
     <router-link class="nav-link" to="/login">User</router-link>
     <router-link class="nav-link" to="/upload">Upload </router-link>
+    <router-link class="nav-link" to="/info">Information </router-link>
   </div>
   <router-view></router-view>
 </template>
