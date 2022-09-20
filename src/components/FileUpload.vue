@@ -40,8 +40,13 @@
 </script>
 
 <template>
-    <h3>File upload </h3>
-    <input type="file" id="uploadFile" name="filename" @change="onFileUploaded">
-    <button @click="upload()">Upload</button>
-    <p>{{status}}</p>
+    <div v-if="userService.isAuthenticated()">
+        <h3>File upload </h3>
+        <input type="file" id="uploadFile" name="filename" @change="onFileUploaded">
+        <button @click="upload()">Upload</button>
+        <p>{{status}}</p>
+    </div>
+    <div v-else>
+        <p>Please login first</p>
+    </div>
 </template>
