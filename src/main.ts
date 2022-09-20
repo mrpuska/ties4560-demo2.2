@@ -5,12 +5,15 @@ import App from './App.vue'
 import DropBox from './components/DropBox.vue';
 import LoginCallback from './components/LoginCallback.vue'
 import Login from './components/Login.vue'
+import Home from './components/Home.vue'
+import FileUpload from './components/FileUpload.vue'
 
 const routes = [
-    {path: '/', component: App},
+    {path: '/', component: Home},
     {path: '/login', component: Login},
     {path: '/dropbox', component: DropBox},
-    {path: '/login/callback', component: LoginCallback}
+    {path: '/login/callback', component: LoginCallback},
+    {path: '/upload', component: FileUpload}
 ]
 
 const router = createRouter({

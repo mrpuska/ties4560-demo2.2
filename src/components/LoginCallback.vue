@@ -1,9 +1,11 @@
 <script setup lang="ts">
-    import { useRoute } from 'vue-router'
+    import { useRoute, useRouter } from 'vue-router'
     import { ref } from 'vue'
+    import userService from '../services/user-service'
 
     const oauth2Uri = "https://api.dropboxapi.com/oauth2/token"
     const route = useRoute()
+    const router = useRouter();
     const authCode = route.query.code;
     var responseJson = ref()
     var redirectUri = window.location.toString()
@@ -22,9 +24,12 @@
             method: 'POST',
             body: params
         }).then(res => {
-            res.json().then(json => {
-                responseJson.value = json;
-            })
+            if (res.status == 200)
+                res.json().then(json => {
+                    userService.setAuthData(json);
+                    userService.fetchUser();
+                    router.push('/');
+                })
         })
     }
 
