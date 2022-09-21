@@ -4,6 +4,7 @@
 # Features
  * Oauth2 SignIn
  * File Upload
+ * File Listing
 
 # Struggles
  * CORS issues, since there is no separate backend.
