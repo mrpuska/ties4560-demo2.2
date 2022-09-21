@@ -8,6 +8,9 @@
 
 # Struggles
  * CORS issues, since there is no separate backend.
+ * https://www.dropbox.com/developers/documentation/http/documentation
+   * See => Browser-based JavaScript and CORS pre-flight requests
+
 
 # Hosted
  * https://ties4560-demo2-2.onrender.com
